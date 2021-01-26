@@ -1,0 +1,4 @@
+1. connect using interactive powershell remoting to server1 and try to gather local disks
+2. gather list of all services from dc
+3. using non-interactive approach, gather list of printers on server1
+4. define your own powershell session with name "PSTraining" and use this session to connect to server2 and gather list of 10 newest security events from eventlog
