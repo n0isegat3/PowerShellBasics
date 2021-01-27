@@ -1,0 +1,5 @@
+1. enumerate all files recursively in C:\Windows on DC remotely (invoke-command) and run that as job (-asjob)
+2. list all jobs
+3. wait for job to complete
+4. receive job data but keep it in the system memory
+5. define new scheduledjob to be run AtStartup and to delete all files in $env:temp
