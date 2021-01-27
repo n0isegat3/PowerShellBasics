@@ -1,0 +1,16 @@
+1. enumerate all files recursively in C:\Windows on DC remotely (invoke-command) and run that as job (-asjob)
+Invoke-Command -ComputerName dc -ScriptBlock {Get-ChildItem -Path C:\Windows -Recurse} -AsJob
+2. list all jobs
+Get-Job
+3. wait for job to complete
+Wait-Job -Name Job1
+Wait-Job -Job (Get-Job -Name Job1)
+Get-Job -Name Job1 | Wait-Job
+4. receive job data but keep it in the system memory
+Receive-Job -Name Job1 -Keep
+5. define new scheduledjob to be run AtStartup and to delete all files in $env:temp
+$JobOpt = New-ScheduledJobOption -RunElevated
+$JobTrigger = New-JobTrigger -AtStartup
+Register-ScheduledJob -name 'cleanup temp' -ScheduledJobOption $JobOpt -Trigger $JobTrigger -ScriptBlock {
+    Get-ChildItem -Path $env:TEMP -Recurse | Remove-Item #-ErrorAction SilentlyContinue
+}
