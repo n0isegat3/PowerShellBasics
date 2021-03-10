@@ -1,8 +1,0 @@
-1. create powershell oneliner to show to following output (you should use both Get-Volume and Get-Partition cmdlets):
-
-	DriveLetter        Size [GB]   Freespace [GB]    Freespace [%] Boot Partition
-	-----------        ---------   --------------    ------------- --------------
-	          C 232.388725280762 63.9273376464844 27.5087948304076           True
-
-
-2. save results from previous command to CSV file with '|' delimiter and without the type information

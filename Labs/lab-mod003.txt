@@ -1,8 +1,0 @@
-1. list all currently available psdrives
-2. list all currently available psproviders
-3. on your Lab VM install Active Directory powershell module (Apps->Optional Features-> Add feature-> select "Active Directory Domain Services and Lightweight Directory Services Tools" and hit Install)
-4. import "ActiveDirectory" powershell module
-5. browse thru the AD using powershell drive "AD:"
-6. read values of registry keys in path "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
-7. using "cert:" psdrive export some certificate
-8. using "Cert:" psdrive export all certificates from your user personal store

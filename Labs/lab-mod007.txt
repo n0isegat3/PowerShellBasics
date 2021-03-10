@@ -1,7 +1,0 @@
-1. generate list of all even numbers between 250 and 750
-2. generate list of all odd numbers between 250 and 750
-3. create your own script with menu - to select between 4 operations
-	1st menu item: list all running processes
-	2nd menu item: list all local psdrives
-	3rd menu item: create folder by name (prompt for name of folder)
-	4th menu item: quit (end of your script)
